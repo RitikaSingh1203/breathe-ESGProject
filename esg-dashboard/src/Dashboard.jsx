@@ -22,7 +22,7 @@ function Dashboard() {
   const navigate = useNavigate()
 
   const fetchData = async () => {
-    const res = await axios.get("http://127.0.0.1:8000/api/all/")
+    const res = await axios.get("https://esg-backend-vocs.onrender.com/api/all/")
     setRecords(res.data)
   }
 
@@ -45,7 +45,7 @@ function Dashboard() {
   // ✅ ADD RECORD
   const addRecord = async () => {
     try {
-      await axios.post("http://127.0.0.1:8000/api/add/", form)
+      await axios.post("https://esg-backend-vocs.onrender.com/api/add/", form)
 
       setForm({
         plant: "",
@@ -64,7 +64,7 @@ function Dashboard() {
   // ✅ APPROVE RECORD
   const approveRecord = async (id) => {
     try {
-      await axios.post(`http://127.0.0.1:8000/api/approve/${id}/`)
+      await axios.post(`https://esg-backend-vocs.onrender.com/api/approve/${id}/`)
       fetchData()
     } catch (err) {
       alert("Approve failed")
@@ -74,7 +74,7 @@ function Dashboard() {
   // ✅ REJECT RECORD
   const rejectRecord = async (id) => {
     try {
-      await axios.post(`http://127.0.0.1:8000/api/reject/${id}/`)
+      await axios.post(`https://esg-backend-vocs.onrender.com/api/reject/${id}/`)
       fetchData()
     } catch (err) {
       alert("Reject failed")
