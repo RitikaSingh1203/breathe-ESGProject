@@ -1,0 +1,4 @@
+TripID,Mode,Distance_km
+T101,Flight,1200
+T102,Hotel,2
+T103,Taxi,35
